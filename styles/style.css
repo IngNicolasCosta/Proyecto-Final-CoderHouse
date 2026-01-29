@@ -138,6 +138,7 @@ header {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.9);
+  flex-wrap: wrap;
 }
 header .logo-nav {
   display: flex;
@@ -164,21 +165,19 @@ header .nav-encabezado a {
 header .nav-encabezado a:hover {
   color: #ff5908;
 }
-header .navbar {
-  width: 100%;
+header .navbar .container-fluid {
+  display: flex;
+  justify-content: center;
 }
 header .navbar .navbar-toggler {
-  border-color: #ff5908;
+  margin: 0 auto;
 }
-header .navbar .navbar-toggler:focus {
-  box-shadow: none;
+header .navbar .navbar-nav {
+  text-align: center;
+  width: 100%;
 }
-header .navbar .nav-link {
-  color: #1a1f29 !important;
-  font-weight: 600;
-}
-header .navbar .nav-link:hover {
-  color: #ff5908 !important;
+header .navbar .navbar-nav .nav-item {
+  width: 100%;
 }
 
 footer {

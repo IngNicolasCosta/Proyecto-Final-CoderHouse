@@ -10,6 +10,7 @@ header {
     z-index: 1000;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.9);
+    flex-wrap: wrap;
 
     .logo-nav {
         display: flex;
@@ -39,17 +40,24 @@ header {
     }
 
     .navbar {
-        width: 100%; 
-        
-        .navbar-toggler {
-            border-color: $color-primario; 
-            &:focus { box-shadow: none; }
+        .container-fluid {
+            display: flex;
+            justify-content: center; 
         }
 
-        .nav-link {
-            color: $color-oscuro !important;
-            font-weight: 600;
-            &:hover { color: $color-primario !important; }
+        .navbar-toggler {
+            
+            margin: 0 auto; 
+        }
+
+        
+        .navbar-nav {
+            text-align: center;
+            width: 100%;
+            
+            .nav-item {
+                width: 100%;
+            }
         }
     }
 }
