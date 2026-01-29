@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'layout';
+@import 'components';
+@import 'pages';
+
+// Estilos Globales
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fuente-cuerpo;
+    color: $color-oscuro;
+    background-color: $color-blanco;
+    line-height: 1.6;
+}

@@ -1,0 +1,53 @@
+/* Reset definitivo para eliminar bordes blancos */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* Iconos específicos */
+.icono-16 { width: 16px; height: 16px; object-fit: contain; }
+.icono-32 { width: 32px; height: 32px; object-fit: contain; }
+.icono-40 { width: 40px; height: 40px; object-fit: contain; }
+.icono-48 { width: 48px; height: 48px; object-fit: contain; }
+.icono-60 { width: 60px; height: 60px; object-fit: contain; }
+
+/* Tipografía */
+h1, h2, h3 { 
+    font-family: $fuente-titulos; 
+    color: $color-primario; 
+}
+h1 { font-size: 3rem; margin-bottom: 1rem; }
+h2 { font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center; }
+
+/* Utilidades */
+.text-centro { text-align: center; }
+.bg-claro { background-color: $color-fondo-claro; }
+.bg-oscuro { background-color: $color-fondo-oscuro; color: $color-blanco; }
+.bg-gradiente-naranja { 
+    background: linear-gradient(90deg, $color-primario, $color-acento); 
+    color: $color-blanco; 
+}
+.lista-sin-estilo { list-style: none; padding: 0; }
+
+/* Reset de enlaces para todo el sitio */
+a {
+    text-anchor: none;
+    text-decoration: none; 
+    color: inherit;       
+    display: inline-block; 
+}

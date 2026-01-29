@@ -1,0 +1,131 @@
+/* Hero Index */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: radial-gradient(circle, #fffbbd 0%, #fffb9c 100%);
+    min-height: 70vh;
+
+    .hero-text { flex: 1; }
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        img { 
+            width: 450px; 
+            height: auto; 
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15)); 
+            transition: transform 0.5s ease;
+            &:hover { transform: scale(1.05) rotate(2deg); }
+        }
+    }
+}
+
+/* Estadísticas */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    .stat-number {
+        font-size: 3.5rem;
+        font-weight: 800;
+        display: block;
+        line-height: 1;
+    }
+    .stat-label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        opacity: 0.9;
+    }
+}
+
+/* Equipo */
+.team-member img { 
+    width: 180px; 
+    height: 180px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin: 0 auto 15px;
+    border: 5px solid $color-blanco;
+    box-shadow: $sombra-suave;
+}
+
+/* Responsive específico */
+@include responsive(tablet) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        .hero-image img { width: 300px; }
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Estilos específicos de Contacto */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; // El formulario es más ancho
+    gap: 50px;
+    
+    @include responsive(tablet) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        
+        label { font-weight: 600; color: $color-oscuro; }
+        
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            &:focus { border-color: $color-primario; outline: none; }
+        }
+        
+        textarea { min-height: 120px; resize: vertical; }
+    }
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 300px; 
+    background: #eee;
+    border-radius: 15px;
+    overflow: hidden; 
+    margin-bottom: 20px;
+    
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+.hours-card {
+    padding: 25px;
+    border-radius: 15px;
+    li { margin-bottom: 10px; }
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}

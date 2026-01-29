@@ -1,0 +1,50 @@
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: $transicion;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+
+    &-primary { background: $color-primario; color: $color-blanco; }
+    &-secondary { background: $color-oscuro; color: $color-blanco; }
+    &-light { background: $color-blanco; color: $color-primario; }
+
+    &:hover {
+        transform: translateY(-3px);
+        filter: brightness(1.1);
+        box-shadow: $sombra-suave;
+    }
+}
+
+.features-grid, .services-grid, .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card, .service-card, .product-card {
+    @include card-style;
+    text-align: center;
+
+    &:hover {
+        transform: translateY(-10px);
+        border-color: $color-primario;
+    }
+
+    img { 
+        margin: 0 auto 20px; 
+    }
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}

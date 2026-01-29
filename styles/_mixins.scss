@@ -1,0 +1,47 @@
+@mixin responsive($breakpoint) {
+    @if $breakpoint == tablet {
+        @media (max-width: 968px) { @content; }
+    }
+    @if $breakpoint == mobile {
+        @media (max-width: 768px) { @content; }
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-style {
+    padding: 30px;
+    border-radius: 15px;
+    background: $color-blanco;
+    box-shadow: $sombra-suave;
+    transition: $transicion;
+    border: 1px solid #eee;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@mixin aparecer {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes reveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@mixin animation-reveal {
+    animation: reveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
