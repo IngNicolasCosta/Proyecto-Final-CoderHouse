@@ -240,6 +240,22 @@ section {
     border: none;
   }
 }
+.carrito_compras a {
+  text-decoration: none;
+  font-size: 52px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.carrito_compras a:hover {
+  transform: scale(1.1);
+}
+.carrito_compras a span {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 30px;

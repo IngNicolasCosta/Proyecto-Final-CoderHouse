@@ -68,7 +68,7 @@
 /* Estilos específicos de Contacto */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr; // El formulario es más ancho
+    grid-template-columns: 1.5fr 1fr; 
     gap: 50px;
     
     @include responsive(tablet) {

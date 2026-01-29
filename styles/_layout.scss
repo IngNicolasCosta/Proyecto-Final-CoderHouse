@@ -106,3 +106,25 @@ section {
         &:last-child { border: none; }
     }
 }
+
+.carrito_compras {
+    a {
+        text-decoration: none;
+        
+        font-size: 52px; 
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        transition: $transicion;
+
+        &:hover {
+            transform: scale(1.1); 
+        }
+
+        span {
+            
+            text-decoration: none;
+            display: inline-block;
+        }
+    }
+}
